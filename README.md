@@ -33,4 +33,32 @@
     ```
 * POST 请求和Postman工具
     * 安装 [body-parser](https://github.com/expressjs/body-parser)  `npm install body-parser --save`
-    * 
+    * 安装 [Postman](postman: https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop?hl=zh-CN)
+
+    ```
+        var bodyParser = require('body-parser')
+        // parse application/x-www-form-urlencoded
+        // app.use(bodyParser.urlencoded({ extended: false }))
+
+        // parse application/json
+        // app.use(bodyParser.json())
+        // create application/json parser
+        var jsonParser = bodyParser.json()
+
+        // create application/x-www-form-urlencoded parser
+        var urlencodedParser = bodyParser.urlencoded({ extended: false })
+        //4、POST 请求和Postman工具
+        //发送text
+        app.post('/',urlencodedParser,function(req,res){
+            console.dir(req.body)
+            // res.send('ok')
+            res.send(req.body.name)
+        })
+
+        //发送json
+        app.post('/upload',jsonParser,function(req,res){
+            console.dir(req.body)
+            res.send(req.body.name)
+        })
+
+    ```
