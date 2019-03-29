@@ -33,7 +33,7 @@
     ```
 * POST 请求和Postman工具
     * 安装 [body-parser](https://github.com/expressjs/body-parser)  `npm install body-parser --save`
-    * 安装 [Postman](postman: https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop?hl=zh-CN)
+    * 安装 [Postman](https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop?hl=zh-CN)
 
     ```
         var bodyParser = require('body-parser')
