@@ -31,3 +31,6 @@
         res.send('home page: '+ req.query.aa)
     })
     ```
+* POST 请求和Postman工具
+    * 安装 [body-parser](https://github.com/expressjs/body-parser)  `npm install body-parser --save`
+    * 
